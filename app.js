@@ -6,7 +6,6 @@ const color = document.querySelector('.color');
 btn.addEventListener('click', ()=> {
 // Get random number between 0 - 3
 const randomNambur = getRandomNumber();
-console.log(randomNambur)
 document.body.style.background = colors[randomNambur];
 color.innerHTML = colors[randomNambur];
 })
