@@ -55,7 +55,7 @@ let currentItem = 0;
 // load intial item
 
 window.addEventListener('DOMContentLoaded', () => {
-  showPerson(0)
+  showPerson(currentItem)
 })
 
 // Show Person Based On Item
@@ -66,3 +66,17 @@ const showPerson = (person) => {
   job.textContent = item.job
   info.textContent = item.text
 }
+
+nextBtn.addEventListener('click', () => {
+  currentItem ++;
+
+  if(currentItem > reviews.length - 1) {
+    currentItem = 0;
+  }
+  showPerson(currentItem)
+})
+
+// Show Previews Person
+prevBtn.addEventListener('click', () => {
+  
+})
