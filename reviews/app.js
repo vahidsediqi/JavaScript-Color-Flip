@@ -55,29 +55,14 @@ let currentItem = 0;
 // load intial item
 
 window.addEventListener('DOMContentLoaded', () => {
-  const item = reviews[currentItem]
+  showPerson(0)
+})
+
+// Show Person Based On Item
+const showPerson = (person) => {
+  const item = reviews[person]
   img.src = item.img
   author.textContent = item.name
   job.textContent = item.job
   info.textContent = item.text
-})
-
-nextBtn.addEventListener('click', () => {
-  const item = reviews[currentItem]
-  if(currentItem != reviews.length) {
-    currentItem ++
-    console.log(currentItem)
-    img.src = item.img
-    author.textContent = item.name
-    job.textContent = item.job
-    info.textContent = item.text
-  } else {
-    currentItem = 0
-    console.log(currentItem)
-    const item = reviews[currentItem]
-    img.src = item.img
-    author.textContent = item.name
-    job.textContent = item.job
-    info.textContent = item.text
-  }
-})
+}
