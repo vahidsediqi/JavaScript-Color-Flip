@@ -1,6 +1,6 @@
 
 
-const dataURL = ('https://vahidsediqi.github.io/Json-data/review-app/data.json')
+// Selecting elements from DOM 
 
 const img = document.getElementById('person-img');
 const author = document.getElementById('author');
@@ -10,6 +10,10 @@ const prevBtn = document.querySelector('.prev-btn');
 const nextBtn = document.querySelector('.next-btn');
 const randomBtn = document.querySelector('.random-btn');
 let currentItem = 0;
+
+
+// Saving the api in a variable
+const dataURL = ('https://vahidsediqi.github.io/Json-data/review-app/data.json')
 
 // Fetching data from json
 async function getData() {
